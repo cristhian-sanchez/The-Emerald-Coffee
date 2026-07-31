@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,7 +8,7 @@
 <meta property="og:title" content="The Emerald Coffee — Café de especialidad">
 <meta property="og:description" content="Cultivado a 1.800 msnm en las montañas de Samaniego, Nariño. Puntaje SCA +86.">
 <meta property="og:type" content="website">
-<link rel="icon" href="logo.png">
+<link rel="icon" href="logo2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -24,8 +23,23 @@
   transition:opacity 1.8s ease;
 }
 .hero-bg img.active { opacity:1; }
-.origen-img { width:100%; height:100%; overflow:hidden; }
-.origen-img img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+.origen-img { position:relative; width:100%; height:100%; overflow:hidden; }
+.origen-img img {
+  position:absolute; inset:0;
+  width:100%; height:100%; display:block; object-fit:cover; object-position:center;
+  opacity:0;
+  transition:opacity 1.6s ease;
+}
+.origen-img img.active { opacity:1; }
+.origen-caption {
+  position:absolute; left:0; right:0; bottom:0; z-index:3;
+  padding:20px 22px 18px;
+  background:linear-gradient(0deg, rgba(8,11,9,0.88), transparent);
+}
+.origen-caption b {
+  display:block; font-family:'Fraunces',serif; font-size:1.15rem; color:#f4dda0; margin-bottom:4px;
+}
+.origen-caption span { font-size:0.82rem; color:#cdc3ac; line-height:1.4; }
 
 </style>
 </head>
@@ -34,8 +48,8 @@
 <!-- ================= NAV ================= -->
 <header id="siteHeader">
   <a href="#top" class="logo">
-    <img src="logo2.png" alt="The Emerald Coffee" class="logo-img">
-    
+    <img src="logo2.jpg" alt="The Emerald Coffee" class="logo-img">
+
   </a>
   <nav class="links">
     <a href="#origen">Origen</a>
@@ -45,7 +59,7 @@
     <a href="#contacto">Contacto</a>
   </nav>
   <div class="nav-cta">
-    <a class="btn wa" href="https://wa.me/573000000000" target="_blank" rel="noopener">
+    <a class="btn wa" href="https://wa.me/573116193694" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
       Escríbenos
     </a>
@@ -105,14 +119,19 @@
   <div class="container">
     <div class="origen-grid">
       <div class="origen-img-wrap reveal">
-        <div class="origen-img">
-          <!-- CAMBIA SOLO EL NOMBRE: finca.jpg -->
-          <img src="IMG-20260731-WA0018.jpg" alt="Finca cafetera de Samaniego">
+        <div class="origen-img" id="origenSlides">
+          <img src="IMG-20260731-WA0015.jpg" alt="Terreno sin sembrar en Samaniego" class="active" data-caption="Sin sembrar" data-desc="El terreno en la vereda alta, listo para el nuevo lote.">
+          <img src="IMG-20260731-WA0013.jpg" alt="Cafetal recién sembrado" data-caption="Sembrado" data-desc="Los primeros almácigos de café.">
+          <img src="IMG-20260731-WA0018.jpg" alt="Planta de café en crecimiento" data-caption="Creciendo" data-desc="La planta gana altura bajo sombra natural.">
+          <img src="IMG-20260731-WA0021.jpg" alt="Cosecha manual de café" data-caption="Cosechando" data-desc="Recolección manual, grano por grano.">
+          <img src="IMG-20260731-WA0020.jpg" alt="Café cosechado" data-caption="Cosechado" data-desc="El fruto ya recolectado, listo para el beneficio húmedo.">
+          <img src="IMG-20260731-WA0016.jpg" alt="Café despulpado" data-caption="Despulpado" data-desc="Se retira la pulpa y queda el grano listo para lavar.">
+          <div class="origen-caption" id="origenCaption">
+            <b>Sin sembrar</b>
+            <span>El terreno en la vereda alta, listo para el nuevo lote.</span>
+          </div>
         </div>
-        <div class="origen-badge">
-          <b>154 familias</b>
-          <span>Caficultoras asociadas en la región</span>
-        </div>
+        
       </div>
       <div class="origen-text">
         <p class="eyebrow reveal">Origen</p>
@@ -210,7 +229,7 @@
       <div class="prod-card reveal reveal-d2">
 
     <img
-        src="IMG-20260731-WA0016.jpg"
+        src="tostion media.jpg"
         alt="Granos de café"
     >
 
@@ -243,7 +262,7 @@
     </div>
     <div class="timeline">
       <div class="tl-step reveal">
-        <div class="tl-photo"><img src="IMG-20260731-WA0015.jpg" alt="Terreno sin sembrar en Samaniego"><span class="tl-num">01</span></div>
+         <div class="tl-photo"><img src="IMG-20260731-WA0015.jpg" alt="Terreno sin sembrar en Samaniego"><span class="tl-num">01</span></div>
         <h4>Sin sembrar</h4><p>Todo listo en el semillero para pasar al nuevo lote.</p>
       </div>
       <div class="tl-step reveal reveal-d1">
@@ -315,7 +334,7 @@
       <div class="contact-cards reveal reveal-d2">
         <div class="contact-card">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
-          <div><b>WhatsApp</b><span><a href="https://wa.me/573000000000" target="_blank" rel="noopener">Respuesta directa para pedidos y muestras</a></span></div>
+          <div><b>WhatsApp</b><span><a href="https://wa.me/573116193694" target="_blank" rel="noopener">Respuesta directa para pedidos y muestras</a></span></div>
         </div>
         <div class="contact-card">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>
@@ -329,7 +348,7 @@
     </div>
     <footer>
       <div class="fmark">
-        <img src="logo.png" alt="The Emerald Coffee" class="fmark-img">
+        <img src="logo2.jpg" alt="The Emerald Coffee" class="fmark-img">
         <small>The Emerald Coffee — Samaniego, Nariño</small>
       </div>
       <small class="fnote">Prototipo de sitio web · diseño propuesto por cs.dev</small>
@@ -337,7 +356,7 @@
   </div>
 </section>
 
-<a class="float-wa" href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+<a class="float-wa" href="https://wa.me/573116193694" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
 </a>
 
