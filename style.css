@@ -1,3 +1,4 @@
+
 /* =========================================================
    THE EMERALD COFFEE — hoja de estilos
    ========================================================= */
@@ -83,7 +84,7 @@ header.scrolled{
   border-bottom:1px solid var(--line);
 }
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-img{height:55px;width:120px;flex-shrink:0;}
+.logo-img{height: 70px;px;width: 150px;;flex-shrink:0;}
 .logo-text{font-family:'Fraunces',serif;font-size:1.05rem;letter-spacing:0.04em;line-height:1.05;color:var(--cream);}
 .logo-text b{color:var(--gold-light);font-weight:600;}
 .logo-text span{display:block;font-family:'Space Grotesk',sans-serif;font-size:0.56rem;letter-spacing:0.32em;color:var(--emerald-bright);margin-top:2px;}
