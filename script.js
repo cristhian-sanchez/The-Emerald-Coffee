@@ -1,3 +1,4 @@
+
 // =========================================================
 // THE EMERALD COFFEE — interacciones
 // =========================================================
@@ -85,6 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
       heroIndex = (heroIndex + 1) % heroSlides.length;
       heroSlides[heroIndex].classList.add('active');
     }, 5000);
+  }
+
+  /* ---------- origen: carrusel de fotos del proceso con leyenda ---------- */
+  const origenSlides = document.querySelectorAll('#origenSlides img');
+  const origenCaption = document.getElementById('origenCaption');
+  if (origenSlides.length > 1) {
+    let origenIndex = 0;
+    setInterval(() => {
+      origenSlides[origenIndex].classList.remove('active');
+      origenIndex = (origenIndex + 1) % origenSlides.length;
+      const current = origenSlides[origenIndex];
+      current.classList.add('active');
+      if (origenCaption) {
+        origenCaption.querySelector('b').textContent = current.dataset.caption || '';
+        origenCaption.querySelector('span').textContent = current.dataset.desc || '';
+      }
+    }, 4000);
   }
 
   /* ---------- ficha técnica: tap-to-flip en pantallas táctiles ---------- */
