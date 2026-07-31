@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Emerald Coffee — Café de especialidad de Samaniego, Nariño</title>
+<meta name="description" content="Café 100% arábico de especialidad, cultivado a 1.800 msnm en Samaniego, Nariño. Puntaje SCA +86, proceso lavado, comercio directo con caficultores.">
+<meta property="og:title" content="The Emerald Coffee — Café de especialidad">
+<meta property="og:description" content="Cultivado a 1.800 msnm en las montañas de Samaniego, Nariño. Puntaje SCA +86.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpolygon points='24,4 34,12 34,26 24,44 14,26 14,12' fill='none' stroke='%23c9a24b' stroke-width='2'/%3E%3Cpolygon points='24,4 34,12 14,12' fill='%232fbd85'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* IMÁGENES: solo cambia los nombres en los atributos src del HTML */
+.hero-bg { position:absolute; inset:0; z-index:0; overflow:hidden; }
+.hero-bg img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+.origen-img { width:100%; height:100%; overflow:hidden; }
+.origen-img img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header id="siteHeader">
+  <a href="#top" class="logo">
+    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="24,4 34,12 34,26 24,44 14,26 14,12" fill="none" stroke="#2fbd85" stroke-width="1.4"/>
+      <polygon points="24,4 34,12 14,12" fill="#2fbd85" opacity="0.85"/>
+      <polygon points="14,12 34,12 34,26 24,44 14,26" fill="none" stroke="#c9a24b" stroke-width="0.8"/>
+      <line x1="14" y1="12" x2="34" y2="26" stroke="#c9a24b" stroke-width="0.5" opacity="0.7"/>
+      <line x1="34" y1="12" x2="14" y2="26" stroke="#c9a24b" stroke-width="0.5" opacity="0.7"/>
+    </svg>
+    <span class="logo-text"><b>The Emerald</b> Coffee<span>SAMANIEGO · NARIÑO</span></span>
+  </a>
+  <nav class="links">
+    <a href="#origen">Origen</a>
+    <a href="#ficha">Ficha técnica</a>
+    <a href="#producto">Café</a>
+    <a href="#proceso">Proceso</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn wa" href="https://wa.me/573000000000" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+      Escríbenos
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- menú móvil -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#origen"><span>01</span>Origen</a>
+  <a href="#ficha"><span>02</span>Ficha técnica</a>
+  <a href="#producto"><span>03</span>Café</a>
+  <a href="#proceso"><span>04</span>Proceso</a>
+  <a href="#contacto"><span>05</span>Contacto</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="IMG-20260731-WA0007.jpg" alt="Cultivo de café en Samaniego"></div>
+  <div class="hero-scrim"></div>
+  <div class="hero-content">
+    <svg class="hero-mark" viewBox="0 0 48 48" fill="none">
+      <polygon points="24,4 34,12 34,26 24,44 14,26 14,12" fill="none" stroke="#c9a24b" stroke-width="1"/>
+      <polygon points="24,4 34,12 14,12" fill="#2fbd85" opacity="0.9"/>
+    </svg>
+    <h1 class="reveal in">Café que nace<br><em>donde toca el cielo.</em></h1>
+    <p class="sub reveal in reveal-d1">The Emerald Coffee crece a 1.800 msnm en las montañas de Samaniego, Nariño. Un café 100% arábico de especialidad, lavado y cultivado a mano por familias caficultoras de la región.</p>
+    <div class="hero-actions reveal in reveal-d2">
+      <a href="#origen" class="btn">Conocer el café</a>
+      <a href="#contacto" class="btn ghost">Agendar degustación →</a>
+    </div>
+    <div class="hero-stats reveal in reveal-d3">
+      <div class="hero-stat"><b data-count="1800">0</b><span>Msnm de altitud</span></div>
+      <div class="hero-stat"><b data-count="86" data-prefix="+">0</b><span>Puntaje SCA</span></div>
+      <div class="hero-stat"><b data-count="100" data-suffix="%">0</b><span>Café arábico</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>Origen Samaniego</span><span>Altitud 1.800 msnm</span><span>Variedad 100% Arábica</span><span>Proceso Lavado</span><span>Puntaje SCA +86</span><span>Comercio directo</span>
+    <span>Origen Samaniego</span><span>Altitud 1.800 msnm</span><span>Variedad 100% Arábica</span><span>Proceso Lavado</span><span>Puntaje SCA +86</span><span>Comercio directo</span>
+  </div>
+</div>
+
+<!-- ================= ORIGEN ================= -->
+<section class="origen" id="origen">
+  <div class="container">
+    <div class="origen-grid">
+      <div class="origen-img-wrap reveal">
+        <div class="origen-img">
+          <!-- CAMBIA SOLO EL NOMBRE: finca.jpg -->
+          <img src="IMG-20260731-WA0018.jpg" alt="Finca cafetera de Samaniego">
+        </div>
+        <div class="origen-badge">
+          <b>154 familias</b>
+          <span>Caficultoras asociadas en la región</span>
+        </div>
+      </div>
+      <div class="origen-text">
+        <p class="eyebrow reveal">Origen</p>
+        <h2 class="reveal">Una tierra donde la montaña le da carácter al grano.</h2>
+        <p class="reveal reveal-d1">Nuestro café se cultiva en las veredas altas de Samaniego, Nariño, donde la niebla y la altura maduran el grano con lentitud. Ese clima frío deja notas dulces y florales — jazmín, azahar — y un cuerpo sedoso que identifica a cada lote.</p>
+        <p class="reveal reveal-d1">Trabajamos directo con los caficultores de la zona: comercio justo, trazabilidad por lote y un tueste medio pensado para resaltar el perfil achocolatado y de especias dulces de este origen.</p>
+        <div class="stat-row">
+          <div class="stat-card reveal reveal-d2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20l6-11 4 7 3-5 5 9H3z"/></svg>
+            <b data-count="1800">0</b><span>Msnm</span>
+          </div>
+          <div class="stat-card reveal reveal-d3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 15 0 0 1 0 18 9 15 0 0 1 0-18"/></svg>
+            <b data-count="86" data-prefix="+">0</b><span>Score SCA</span>
+          </div>
+          <div class="stat-card reveal reveal-d4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"/></svg>
+            <b data-count="100" data-suffix="%">0</b><span>Arábica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FICHA TÉCNICA (signature) ================= -->
+<section class="ficha" id="ficha">
+  <div class="container">
+    <div class="ficha-wrap">
+      <div class="ficha-top">
+        <div>
+          <p class="eyebrow reveal">La ficha del grano</p>
+          <h3 class="reveal">La misma ficha técnica de la etiqueta, ahora interactiva.</h3>
+        </div>
+        <p class="ficha-hint reveal">Pasa el cursor — o toca en móvil — sobre cada casilla para ver el detalle completo, tal como aparece en la contraetiqueta del empaque.</p>
+      </div>
+      <div class="ficha-grid reveal">
+        <div class="ficha-cell" tabindex="0">
+          <div class="face front">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 20l6-11 4 7 3-5 5 9H3z"/></svg>
+            <div><b>Origen</b><br><span>Colombia</span></div>
+          </div>
+          <div class="face back"><span>Origen</span><p>Samaniego, Nariño, Colombia. Cultivo en ladera, clima frío de montaña.</p></div>
+        </div>
+        <div class="ficha-cell" tabindex="0">
+          <div class="face front">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 21h18M5 21l4-9 3 5 2-4 5 8"/></svg>
+            <div><b>Altitud</b><br><span>1.800 msnm</span></div>
+          </div>
+          <div class="face back"><span>Altitud</span><p>1.800 metros sobre el nivel del mar — maduración lenta, más azúcares naturales.</p></div>
+        </div>
+        <div class="ficha-cell" tabindex="0">
+          <div class="face front">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"/></svg>
+            <div><b>Variedad</b><br><span>100% Arábica</span></div>
+          </div>
+          <div class="face back"><span>Variedad</span><p>Arábica de especialidad, fragancia con notas dulces y frutales — jazmín y azahar.</p></div>
+        </div>
+        <div class="ficha-cell" tabindex="0">
+          <div class="face front">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3v6m0 0c-4 0-6 3-6 6a6 6 0 0 0 12 0c0-3-2-6-6-6z"/></svg>
+            <div><b>Proceso</b><br><span>Lavado</span></div>
+          </div>
+          <div class="face back"><span>Proceso</span><p>Beneficio húmedo tradicional. Cuerpo sedoso y taza limpia.</p></div>
+        </div>
+        <div class="ficha-cell" tabindex="0">
+          <div class="face front">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+            <div><b>Score</b><br><span>SCA +86</span></div>
+          </div>
+          <div class="face back"><span>Score</span><p>Perfil achocolatado y de especias dulces. Tueste medio, ideal espresso, filtrado o prensa francesa.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCTO ================= -->
+<section class="producto" id="producto">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">El café</p>
+      <h2>Presentación de 1 kg, pensada para cafeterías y distribuidores.</h2>
+      <p>Empaque hermético con válvula, etiqueta con código QR de trazabilidad y ficha técnica impresa — la misma que reproducimos arriba en la web.</p>
+    </div>
+    <div class="prod-gallery">
+      <div class="prod-card wide reveal">
+        <img src="Gemini_Generated_Image_1.png" alt="Empaque The Emerald Coffee de 1kg, café tipo Colombia, puntaje SCA +86">
+        <div class="tag">Empaque 1kg · Café tipo Colombia</div>
+      </div>
+      <div class="prod-card reveal reveal-d1">
+        <img src="Gemini_Generated_Image_2.png" alt="Contraetiqueta con ficha técnica: origen, altitud, variedad, proceso y score SCA">
+        <div class="tag">Ficha técnica de la etiqueta</div>
+      </div>
+      <div class="prod-card reveal reveal-d2">
+
+    <img
+        src="IMG-20260731-WA0016.jpg"
+        alt="Granos de café"
+    >
+
+    <div class="tag">
+        Tueste medio
+    </div>
+
+</div>
+      <div class="prod-card reveal reveal-d1">
+        <!-- CAMBIA SOLO EL NOMBRE: empaque-mesa.jpg -->
+        <img src="Gemini_Generated_Image_3.png" alt="Empaque de café sobre una mesa">
+        <div class="tag">Presentación de exportación</div>
+      </div>
+      <div class="prod-card wide reveal reveal-d2">
+        <!-- CAMBIA SOLO EL NOMBRE: preparacion.jpg -->
+        <img src="IMG-20260731-WA0022.jpg" alt="Preparación de café">
+        <div class="tag">Preparación · Espresso · Filtrado · Prensa francesa</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESO ================= -->
+<section class="proceso" id="proceso">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Del cultivo a la taza</p>
+      <h2>Un proceso trazable, lote por lote.</h2>
+      <p>Cinco etapas desde la vereda hasta el empaque final, con el mismo cuidado que exige un café de puntaje +86.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-step reveal"><div class="tl-num">01</div><h4>Cultivo</h4><p>Ladera alta, 1.800 msnm, sombra natural y suelos volcánicos de Nariño.</p></div>
+      <div class="tl-step reveal reveal-d1"><div class="tl-num">02</div><h4>Cosecha</h4><p>Recolección manual, solo cerezas maduras, selección grano por grano.</p></div>
+      <div class="tl-step reveal reveal-d2"><div class="tl-num">03</div><h4>Lavado</h4><p>Beneficio húmedo tradicional para un perfil limpio y sedoso.</p></div>
+      <div class="tl-step reveal reveal-d3"><div class="tl-num">04</div><h4>Secado</h4><p>Secado lento al sol para conservar los azúcares del grano.</p></div>
+      <div class="tl-step reveal reveal-d4"><div class="tl-num">05</div><h4>Tueste y empaque</h4><p>Tueste medio, empacado en válvula que conserva aroma y frescura.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALORES ================= -->
+<section class="valores">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Compromiso</p>
+      <h2>Café de especialidad con impacto real en el territorio.</h2>
+    </div>
+    <div class="val-grid reveal">
+      <div class="val-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"/></svg><p>100% café arábico de especialidad</p></div>
+      <div class="val-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg><p>Sostenible y responsable con la tierra</p></div>
+      <div class="val-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M7 12h10M7 12l3-3M7 12l3 3M17 12l-3-3M17 12l-3 3"/></svg><p>Comercio directo con el caficultor</p></div>
+      <div class="val-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18 13 13 0 0 1 0-18"/></svg><p>Cuidamos nuestro planeta</p></div>
+      <div class="val-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="8" cy="9" r="2.4"/><circle cx="16" cy="9" r="2.4"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg><p>Apoyamos comunidades locales</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section class="contacto" id="contacto">
+  <div class="container">
+    <div class="contacto-grid">
+      <div>
+        <p class="eyebrow reveal">Hablemos</p>
+        <h2 class="reveal">¿Quieres llevar The Emerald Coffee a tu cafetería o negocio?</h2>
+        <p class="lead reveal reveal-d1">Escríbenos para conocer precios por volumen, muestras de degustación y disponibilidad para distribución.</p>
+        <form class="form reveal reveal-d2" id="contactForm" novalidate>
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div>
+            <label for="contacto-input">Correo o WhatsApp</label>
+            <input type="text" id="contacto-input" name="contacto" placeholder="¿Cómo te contactamos?" required>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos qué necesitas..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar por WhatsApp</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
+      </div>
+      <div class="contact-cards reveal reveal-d2">
+        <div class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
+          <div><b>WhatsApp</b><span><a href="https://wa.me/573000000000" target="_blank" rel="noopener">Respuesta directa para pedidos y muestras</a></span></div>
+        </div>
+        <div class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>
+          <div><b>Correo</b><span><a href="mailto:contacto@theemeraldcoffee.co">contacto@theemeraldcoffee.co</a></span></div>
+        </div>
+        <div class="contact-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          <div><b>Origen</b><span>Samaniego, Nariño, Colombia</span></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="fmark">
+        <svg viewBox="0 0 48 48" fill="none">
+          <polygon points="24,4 34,12 34,26 24,44 14,26 14,12" fill="none" stroke="#c9a24b" stroke-width="1"/>
+          <polygon points="24,4 34,12 14,12" fill="#2fbd85" opacity="0.85"/>
+        </svg>
+        <small>The Emerald Coffee — Samaniego, Nariño</small>
+      </div>
+      <small class="fnote">Prototipo de sitio web · diseño propuesto por cs.dev</small>
+    </footer>
+  </div>
+</section>
+
+<a class="float-wa" href="https://wa.me/573000000000" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.2-.4-4.5-1.3l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
