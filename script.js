@@ -1,11 +1,9 @@
-
 // =========================================================
 // THE EMERALD COFFEE — interacciones
 // =========================================================
 
 // Número de WhatsApp del negocio (formato internacional, sin + ni espacios).
-// TODO: reemplazar por el número real de The Emerald Coffee.
-const WHATSAPP_NUMBER = '573000000000';
+const WHATSAPP_NUMBER = '573116193694';
 
 document.addEventListener('DOMContentLoaded', () => {
 
