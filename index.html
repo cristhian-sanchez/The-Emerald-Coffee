@@ -16,7 +16,13 @@
 <style>
 /* IMÁGENES: solo cambia los nombres en los atributos src del HTML */
 .hero-bg { position:absolute; inset:0; z-index:0; overflow:hidden; }
-.hero-bg img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
+.hero-bg img {
+  position:absolute; inset:0;
+  width:100%; height:100%; display:block; object-fit:cover; object-position:center;
+  opacity:0;
+  transition:opacity 1.8s ease;
+}
+.hero-bg img.active { opacity:1; }
 .origen-img { width:100%; height:100%; overflow:hidden; }
 .origen-img img { width:100%; height:100%; display:block; object-fit:cover; object-position:center; }
 
@@ -65,7 +71,12 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
-  <div class="hero-bg"><img src="IMG-20260731-WA0007.jpg" alt="Cultivo de café en Samaniego"></div>
+  <div class="hero-bg" id="heroBg">
+    <img src="IMG-20260731-WA0007.jpg" alt="Cultivo de café en Samaniego" class="active">
+    <img src="IMG-20260731-WA0008.jpg" alt="Finca cafetera de Samaniego">
+    <img src="IMG-20260731-WA0026.jpg" alt="Preparación de café The Emerald Coffee">
+    <img src="IMG-20260731-WA0013.jpg" alt="Preparación de café The Emerald Coffee">
+  </div>
   <div class="hero-scrim"></div>
   <div class="hero-content">
     <svg class="hero-mark" viewBox="0 0 48 48" fill="none">
