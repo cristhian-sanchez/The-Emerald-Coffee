@@ -76,6 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- hero: carrusel de imágenes de fondo ---------- */
+  const heroSlides = document.querySelectorAll('#heroBg img');
+  if (heroSlides.length > 1) {
+    let heroIndex = 0;
+    setInterval(() => {
+      heroSlides[heroIndex].classList.remove('active');
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      heroSlides[heroIndex].classList.add('active');
+    }, 5000);
+  }
+
   /* ---------- ficha técnica: tap-to-flip en pantallas táctiles ---------- */
   const fichaCells = document.querySelectorAll('.ficha-cell');
   fichaCells.forEach(cell => {
