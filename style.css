@@ -1,4 +1,3 @@
-
 /* =========================================================
    THE EMERALD COFFEE — hoja de estilos
    ========================================================= */
@@ -508,3 +507,136 @@ footer .fnote{font-size:0.72rem;color:var(--cream-dim);opacity:0.7;}
   .prod-card{height:260px;padding:14px 14px 48px;}
   .prod-card.wide{height:260px;}
 }
+/* =========================================================
+   NUEVAS SECCIONES — Nosotros, Productos, Precios, Proceso extra,
+   Tarabita, Exportación, Galería, Ubicación
+   ========================================================= */
+
+/* ---------- NOSOTROS (misión / visión) ---------- */
+.nosotros{padding:120px 0;background:var(--black-2);}
+.nosotros-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:8px;}
+.nosotros-card{background:rgba(19,32,25,0.9);padding:40px 36px;}
+.nosotros-card svg{width:30px;height:30px;color:var(--emerald-bright);margin-bottom:18px;}
+.nosotros-card h3{font-family:'Fraunces',serif;font-size:1.3rem;margin:0 0 12px;color:var(--gold-light);}
+.nosotros-card p{color:var(--cream-dim);line-height:1.7;font-size:0.96rem;margin:0;}
+@media (max-width:900px){.nosotros-grid{grid-template-columns:1fr;}}
+
+/* ---------- PRODUCTOS: almendra / pergamino / tostado ---------- */
+.etapas-cafe{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-bottom:56px;}
+.etapa-card{position:relative;}
+.etapa-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:var(--radius);}
+.etapa-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.etapa-card:hover .etapa-img img{transform:scale(1.05);}
+.etapa-num{
+  position:absolute;top:14px;left:14px;z-index:2;
+  font-family:'Space Grotesk',sans-serif;font-size:0.72rem;letter-spacing:0.08em;
+  color:var(--gold-light);background:rgba(8,11,9,0.65);padding:4px 9px;border-radius:20px;
+}
+.etapa-card h3{font-family:'Fraunces',serif;font-size:1.2rem;margin:16px 0 8px;color:var(--cream);}
+.etapa-card p{color:var(--cream-dim);font-size:0.9rem;line-height:1.6;margin:0;}
+@media (max-width:900px){.etapas-cafe{grid-template-columns:1fr;}}
+
+/* ---------- PRECIOS ---------- */
+.precios{padding:120px 0;background:var(--black-2);}
+.precios-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.precio-card{background:rgba(19,32,25,0.92);padding:38px 30px;display:flex;flex-direction:column;gap:14px;}
+.precio-card h3{font-family:'Fraunces',serif;font-size:1.25rem;margin:0;color:var(--gold-light);}
+.precio-tag{
+  font-family:'Space Grotesk',sans-serif;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--emerald-bright);
+}
+.precio-card p{color:var(--cream-dim);font-size:0.92rem;line-height:1.6;margin:0;flex-grow:1;}
+.btn.ghost.sm{
+  border:1px solid var(--gold);padding:11px 20px;font-size:0.72rem;width:fit-content;
+  letter-spacing:0.12em;text-transform:uppercase;font-family:'Space Grotesk',sans-serif;
+}
+@media (max-width:900px){.precios-grid{grid-template-columns:1fr;}}
+
+/* ---------- MÉTODOS DE BENEFICIO (dentro de Proceso) ---------- */
+.metodos-proceso{margin-top:80px;padding-top:64px;border-top:1px solid var(--line);}
+.metodo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.metodo-card{background:rgba(19,32,25,0.9);padding:34px 30px;}
+.metodo-card svg{width:28px;height:28px;color:var(--emerald-bright);margin-bottom:14px;}
+.metodo-card h4{font-family:'Fraunces',serif;font-size:1.1rem;margin:0 0 10px;color:var(--cream);}
+.metodo-card p{color:var(--cream-dim);font-size:0.9rem;line-height:1.65;margin:0;}
+@media (max-width:900px){.metodo-grid{grid-template-columns:1fr;}}
+
+/* ---------- VIDEO TARABITA ---------- */
+.tarabita{padding:120px 0;background:var(--coffee-2);}
+.tarabita-video{
+  max-width:720px;margin:0 auto;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,0.35);
+}
+.tarabita-video video{width:100%;height:auto;display:block;background:#000;}
+
+/* ---------- EXPORTACIÓN ---------- */
+.exportacion{padding:120px 0;}
+.exportacion-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:6vw;align-items:center;}
+.exportacion-img{aspect-ratio:4/3;overflow:hidden;border-radius:var(--radius);}
+.exportacion-img img{width:100%;height:100%;object-fit:cover;}
+.exportacion .lead{color:var(--cream-dim);line-height:1.7;font-size:1rem;margin:18px 0 22px;max-width:52ch;}
+.export-list{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-direction:column;gap:12px;}
+.export-list li{
+  position:relative;padding-left:24px;color:var(--cream-dim);font-size:0.94rem;line-height:1.6;
+}
+.export-list li::before{
+  content:'';position:absolute;left:0;top:9px;width:12px;height:1px;background:var(--gold);
+}
+@media (max-width:900px){.exportacion-grid{grid-template-columns:1fr;}}
+
+/* ---------- GALERÍA ---------- */
+.galeria{padding:120px 0;background:var(--black-2);}
+.galeria-grid{
+  columns:4 220px;column-gap:14px;
+}
+.galeria-item{break-inside:avoid;margin-bottom:14px;border-radius:var(--radius);overflow:hidden;}
+.galeria-item img{width:100%;height:auto;display:block;transition:transform .5s ease;}
+.galeria-item:hover img{transform:scale(1.04);}
+@media (max-width:900px){.galeria-grid{columns:2 200px;}}
+@media (max-width:600px){.galeria-grid{columns:2 150px;column-gap:8px;} .galeria-item{margin-bottom:8px;}}
+
+/* ---------- UBICACIÓN ---------- */
+.ubicacion{padding:120px 0;}
+.ubicacion-wrap{
+  border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);
+  filter:grayscale(0.3) contrast(1.05);
+}
+.ubicacion-wrap iframe{display:block;}
+
+/* ---------- NOSOTROS: layout con foto ---------- */
+.nosotros-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:6vw;align-items:stretch;margin-top:8px;background:none;border:none;}
+.nosotros-img{position:relative;border-radius:var(--radius);overflow:hidden;min-height:320px;}
+.nosotros-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.nosotros-cards{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);}
+.nosotros-cards .nosotros-card{background:rgba(19,32,25,0.9);}
+@media (max-width:900px){
+  .nosotros-grid{grid-template-columns:1fr;}
+  .nosotros-img{min-height:220px;}
+}
+
+/* ---------- PRECIOS: foto en cada tarjeta ---------- */
+.precio-img{aspect-ratio:16/10;overflow:hidden;border-radius:var(--radius);margin:-38px -30px 6px;}
+.precio-img img{width:100%;height:100%;object-fit:cover;}
+
+/* ---------- MÉTODOS DE BENEFICIO: foto en cada tarjeta ---------- */
+.metodo-img{aspect-ratio:16/9;overflow:hidden;border-radius:var(--radius);margin-bottom:18px;}
+.metodo-img img{width:100%;height:100%;object-fit:cover;}
+
+/* ---------- VALORES: foto de fondo ---------- */
+.valores-bg{position:absolute;inset:0;z-index:0;}
+.valores-bg img{width:100%;height:100%;object-fit:cover;}
+.valores-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(19,32,25,0.92) 0%, rgba(19,32,25,0.88) 60%, rgba(19,32,25,0.95) 100%);
+}
+.valores .container{position:relative;z-index:1;}
+
+/* ---------- CONTACTO: foto de fondo ---------- */
+.contacto-bg{position:absolute;inset:0;z-index:0;}
+.contacto-bg img{width:100%;height:100%;object-fit:cover;}
+.contacto-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(19,32,25,0.94) 0%, rgba(19,32,25,0.9) 100%);
+}
+.contacto .container{position:relative;z-index:1;}
+
