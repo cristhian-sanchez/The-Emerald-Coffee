@@ -8,7 +8,38 @@
 <meta property="og:title" content="The Emerald Coffee — Café de especialidad">
 <meta property="og:description" content="Cultivado a 1.800 msnm en las montañas de Samaniego, Nariño. Puntaje SCA +86.">
 <meta property="og:type" content="website">
+<!-- IMPORTANTE: reemplaza theemeraldcoffee.co por tu dominio real al publicar -->
+<meta property="og:url" content="https://theemeraldcoffee.co/">
+<meta property="og:image" content="https://theemeraldcoffee.co/Gemini_Generated_Image_1.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://theemeraldcoffee.co/">
 <link rel="icon" href="logo2.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "The Emerald Coffee",
+  "url": "https://theemeraldcoffee.co/",
+  "logo": "https://theemeraldcoffee.co/logo2.jpg",
+  "description": "Café 100% arábico de especialidad cultivado a 1.800 msnm en Samaniego, Nariño, Colombia.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Samaniego",
+    "addressRegion": "Nariño",
+    "addressCountry": "CO"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "The Emerald Coffee — Café de especialidad de Samaniego",
+  "image": "https://theemeraldcoffee.co/Gemini_Generated_Image_1.png",
+  "description": "Café 100% arábico de especialidad, proceso lavado, puntaje SCA +86, cultivado a 1.800 msnm en Samaniego, Nariño.",
+  "brand": { "@type": "Brand", "name": "The Emerald Coffee" }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -23,6 +54,23 @@
   transition:opacity 1.8s ease;
 }
 .hero-bg img.active { opacity:1; }
+.origen-img { position:relative; width:100%; height:100%; overflow:hidden; }
+.origen-img img {
+  position:absolute; inset:0;
+  width:100%; height:100%; display:block; object-fit:cover; object-position:center;
+  opacity:0;
+  transition:opacity 1.6s ease;
+}
+.origen-img img.active { opacity:1; }
+.origen-caption {
+  position:absolute; left:0; right:0; bottom:0; z-index:3;
+  padding:20px 22px 18px;
+  background:linear-gradient(0deg, rgba(8,11,9,0.88), transparent);
+}
+.origen-caption b {
+  display:block; font-family:'Fraunces',serif; font-size:1.15rem; color:#f4dda0; margin-bottom:4px;
+}
+.origen-caption span { font-size:0.82rem; color:#cdc3ac; line-height:1.4; }
 
 </style>
 </head>
@@ -36,10 +84,11 @@
   </a>
   <nav class="links">
     <a href="#origen">Origen</a>
-    <a href="#producto">Productos</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#ubicacion">Ubicación</a>
+    <a href="#ficha">Ficha técnica</a>
+    <a href="#producto">Café</a>
+    <a href="#pedido">Pedido</a>
+    <a href="#finca">La finca</a>
+    <a href="#faq">FAQ</a>
     <a href="#contacto">Contacto</a>
   </nav>
   <div class="nav-cta">
@@ -56,20 +105,19 @@
 <!-- menú móvil -->
 <nav class="mobile-nav" id="mobileNav">
   <a href="#origen"><span>01</span>Origen</a>
-  <a href="#producto"><span>02</span>Productos</a>
-  <a href="#nosotros"><span>03</span>Nosotros</a>
-  <a href="#proceso"><span>04</span>Proceso</a>
-  <a href="#ubicacion"><span>05</span>Ubicación</a>
-  <a href="#contacto"><span>06</span>Contacto</a>
+  <a href="#ficha"><span>02</span>Ficha técnica</a>
+  <a href="#producto"><span>03</span>Café</a>
+  <a href="#pedido"><span>04</span>Pedido</a>
+  <a href="#finca"><span>05</span>La finca</a>
+  <a href="#faq"><span>06</span>FAQ</a>
+  <a href="#contacto"><span>07</span>Contacto</a>
 </nav>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="hero-bg" id="heroBg">
     <img src="IMG-20260731-WA0007.jpg" alt="Cultivo de café en Samaniego" class="active">
-    <img src="IMG-20260731-WA0011.jpg" alt="Paisaje de montaña en Samaniego, Nariño">
     <img src="IMG-20260731-WA0018.jpg" alt="Finca cafetera de Samaniego">
-    <img src="IMG-20260731-WA0019.jpg" alt="Vista de la finca cafetera">
     <img src="IMG-20260731-WA0022.jpg" alt="Preparación de café The Emerald Coffee">
   </div>
   <div class="hero-scrim"></div>
@@ -82,7 +130,7 @@
     <p class="sub reveal in reveal-d1">The Emerald Coffee crece a 1.800 msnm en las montañas de Samaniego, Nariño. Un café 100% arábico de especialidad, lavado y cultivado a mano por familias caficultoras de la región.</p>
     <div class="hero-actions reveal in reveal-d2">
       <a href="#origen" class="btn">Conocer el café</a>
-      <a href="#producto" class="btn ghost">Ver productos y precios →</a>
+      <a href="#contacto" class="btn ghost">Agendar degustación →</a>
     </div>
     <div class="hero-stats reveal in reveal-d3">
       <div class="hero-stat"><b data-count="1800">0</b><span>Msnm de altitud</span></div>
@@ -104,117 +152,133 @@
 <!-- ================= ORIGEN ================= -->
 <section class="origen" id="origen">
   <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Origen</p>
-      <h2>Una tierra donde la montaña le da carácter al grano.</h2>
-      <p>Nuestro café se cultiva en las veredas altas de Samaniego, Nariño, donde la niebla y la altura maduran el grano con lentitud. Ese clima frío deja notas dulces y florales — jazmín, azahar — y un cuerpo sedoso que identifica a cada lote. Así se ve, paso a paso, el camino completo del grano: desde el semillero hasta que el café queda listo.</p>
+    <div class="origen-grid">
+      <div class="origen-img-wrap reveal">
+        <div class="origen-img" id="origenSlides">
+          <img src="IMG-20260731-WA0015.jpg" alt="Terreno sin sembrar en Samaniego" class="active" data-caption="Sin sembrar" data-desc="El terreno en la vereda alta, listo para el nuevo lote.">
+          <img src="IMG-20260731-WA0013.jpg" alt="Cafetal recién sembrado" data-caption="Sembrado" data-desc="Los primeros almácigos de café.">
+          <img src="IMG-20260731-WA0018.jpg" alt="Planta de café en crecimiento" data-caption="Creciendo" data-desc="La planta gana altura bajo sombra natural.">
+          <img src="IMG-20260731-WA0021.jpg" alt="Cosecha manual de café" data-caption="Cosechando" data-desc="Recolección manual, grano por grano.">
+          <img src="IMG-20260731-WA0020.jpg" alt="Café cosechado" data-caption="Cosechado" data-desc="El fruto ya recolectado, listo para el beneficio húmedo.">
+          <img src="IMG-20260731-WA0016.jpg" alt="Café despulpado" data-caption="Despulpado" data-desc="Se retira la pulpa y queda el grano listo para lavar.">
+          <div class="origen-caption" id="origenCaption">
+            <b>Sin sembrar</b>
+            <span>El terreno en la vereda alta, listo para el nuevo lote.</span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="origen-text">
+        <p class="eyebrow reveal">Origen</p>
+        <h2 class="reveal">Una tierra donde la montaña le da carácter al grano.</h2>
+        <p class="reveal reveal-d1">Nuestro café se cultiva en las veredas altas de Samaniego, Nariño, donde la niebla y la altura maduran el grano con lentitud. Ese clima frío deja notas dulces y florales — jazmín, azahar — y un cuerpo sedoso que identifica a cada lote.</p>
+        <p class="reveal reveal-d1">Trabajamos directo con los caficultores de la zona: comercio justo, trazabilidad por lote y un tueste medio pensado para resaltar el perfil achocolatado y de especias dulces de este origen.</p>
+        <div class="stat-row">
+          <div class="stat-card reveal reveal-d2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20l6-11 4 7 3-5 5 9H3z"/></svg>
+            <b data-count="1800">0</b><span>Msnm</span>
+          </div>
+          <div class="stat-card reveal reveal-d3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 15 0 0 1 0 18 9 15 0 0 1 0-18"/></svg>
+            <b data-count="86" data-prefix="+">0</b><span>Score SCA</span>
+          </div>
+          <div class="stat-card reveal reveal-d4">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"/></svg>
+            <b data-count="100" data-suffix="%">0</b><span>Arábica</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="stat-row reveal">
-      <div class="stat-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 20l6-11 4 7 3-5 5 9H3z"/></svg>
-        <b data-count="1800">0</b><span>Msnm</span>
-      </div>
-      <div class="stat-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 15 0 0 1 0 18 9 15 0 0 1 0-18"/></svg>
-        <b data-count="86" data-prefix="+">0</b><span>Score SCA</span>
-      </div>
-      <div class="stat-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"/></svg>
-        <b data-count="100" data-suffix="%">0</b><span>Arábica</span>
-      </div>
-    </div>
-
-    <div class="historia">
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0015.jpg" alt="Semillero y terreno preparado en Samaniego"><span class="historia-num">01</span></div>
-        <div class="historia-text">
+    <div class="origen-steps">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0015.jpg" alt="Semillero de café en Samaniego">
+          <span class="origen-step-num">01</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Semillero</h3>
-          <p>Todo comienza en el semillero: se selecciona la semilla de las mejores plantas del lote anterior, se prepara el sustrato y se cuidan los primeros almácigos bajo sombra durante varios meses, mientras el terreno definitivo se limpia y se alista para recibirlos.</p>
+          <p>Todo nace en el almácigo: seleccionamos la semilla de las plantas con mejor comportamiento del lote anterior y la cuidamos bajo sombra, donde forma raíz durante varios meses antes de salir al terreno definitivo.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0013.jpg" alt="Siembra de café recién trasplantado"><span class="historia-num">02</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0013.jpg" alt="Siembra de café recién trasplantado">
+          <span class="origen-step-num">02</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Siembra</h3>
-          <p>Cuando el almácigo tiene el tamaño adecuado, se trasplanta al lote definitivo. Cada planta se siembra cuidando que la raíz quede firme y bien cubierta, respetando la distancia entre surcos y la sombra natural que necesita para desarrollarse sana.</p>
+          <p>Cuando el almácigo alcanza el tamaño adecuado, cada planta se traslada al lote definitivo, cuidando la distancia entre surcos y la sombra de los árboles nativos que la van a acompañar.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0018.jpg" alt="Planta de café en crecimiento y floración"><span class="historia-num">03</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0018.jpg" alt="Planta de café en crecimiento y floración">
+          <span class="origen-step-num">03</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Crecimiento y floración</h3>
-          <p>La planta gana altura mes a mes bajo la sombra de árboles nativos. Meses después de la siembra llega la primera floración: la mata se cubre de pequeñas flores blancas de aroma dulce, anuncio de que pronto habrá cosecha.</p>
+          <p>La planta gana altura despacio bajo la niebla de las veredas altas. Meses después llega la floración: pequeñas flores blancas de aroma dulce que anuncian la cosecha que se acerca.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0017.jpg" alt="Planta de café con cerezas formándose"><span class="historia-num">04</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0017.jpg" alt="Planta de café con cerezas formándose">
+          <span class="origen-step-num">04</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Formación del grano</h3>
-          <p>Después de la floración empiezan a formarse las primeras cerezas. Durante varios meses van creciendo y cambiando de color, del verde al amarillo, hasta llegar al rojo intenso que indica que ya están en su punto justo de maduración.</p>
+          <p>Tras la floración empiezan a formarse las cerezas. Durante varias semanas cambian de color — del verde al amarillo y luego al rojo — hasta llegar al punto exacto de maduración.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0021.jpg" alt="Cosecha manual y artesanal de café"><span class="historia-num">05</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0021.jpg" alt="Cosecha manual y artesanal de café">
+          <span class="origen-step-num">05</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Cosecha</h3>
-          <p>La cosecha es 100% manual y artesanal: se recogen únicamente las cerezas maduras, grano por grano, pasando varias veces por el mismo lote a lo largo de la temporada. Este método selectivo, aunque más lento, garantiza que solo llegue al beneficio el fruto en su punto óptimo.</p>
+          <p>La recolección es 100% manual: se pasa varias veces por el mismo lote a lo largo de la temporada, recogiendo únicamente las cerezas ya maduras. Es más lento, pero es lo que garantiza la calidad de cada lote.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0016.jpg" alt="Café despulpado, listo para fermentar"><span class="historia-num">06</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0016.jpg" alt="Café despulpado, listo para fermentar">
+          <span class="origen-step-num">06</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Despulpado</h3>
-          <p>El mismo día de la cosecha, la cereza pasa por la despulpadora, que retira la cáscara exterior. El grano queda cubierto de mucílago y, a partir de aquí, puede pasar por distintos procesos de fermentación según el perfil de taza que se busca.</p>
+          <p>El mismo día de la cosecha, la cereza pasa por la despulpadora, que retira la cáscara exterior. El grano queda cubierto de mucílago y listo para definir su proceso de beneficio.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0019.jpg" alt="Café en proceso de lavado y fermentación"><span class="historia-num">07</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0019.jpg" alt="Café en proceso de lavado y fermentación">
+          <span class="origen-step-num">07</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Lavado</h3>
-          <p>Tras la fermentación, no todos los lotes se procesan igual: puede hacerse un <strong>lavado limpio</strong> (se remueve todo el mucílago en tanques con agua antes de secar, para una taza más limpia y ligera), un <strong>semilavado</strong> (se retira solo parte del mucílago, dejando más dulzor y cuerpo), o dejarse <strong>sin lavar</strong> — proceso natural —, donde el grano se seca con la cereza casi intacta, para una taza más frutal e intensa.</p>
+          <p>Aquí se define el perfil de taza: puede hacerse un lavado limpio (se retira todo el mucílago en tanques con agua, para una taza más ligera), un semilavado (se deja parte del mucílago, más dulzor y cuerpo), o dejarse natural — sin lavar —, secando el grano con la cereza casi intacta, para una taza más frutal.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0023.jpg" alt="Secado del café en la finca"><span class="historia-num">08</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0023.jpg" alt="Secado del café en la finca">
+          <span class="origen-step-num">08</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Secado</h3>
-          <p>El café se seca lentamente, extendido en capas delgadas y removido varias veces al día para lograr un secado uniforme, hasta alcanzar el punto de humedad ideal para su almacenamiento y posterior trilla.</p>
+          <p>El café se seca lentamente, extendido en capas delgadas y removido varias veces al día, hasta alcanzar el punto de humedad ideal para su almacenamiento y posterior trilla.</p>
         </div>
       </div>
-      <div class="historia-step reveal">
-        <div class="historia-img"><img src="IMG-20260731-WA0024.jpg" alt="Café ya listo, almacenado en sacos"><span class="historia-num">09</span></div>
-        <div class="historia-text">
+      <div class="origen-step reveal">
+        <div class="origen-step-media">
+          <img src="IMG-20260731-WA0024.jpg" alt="Café ya listo, almacenado en sacos">
+          <span class="origen-step-num">09</span>
+        </div>
+        <div class="origen-step-text">
           <h3>Café listo</h3>
-          <p>Con el grano ya seco y en su punto, el café queda listo: en pergamino para almacenar y comercializar, o para continuar el camino hacia la trilla, la selección y el tueste, antes de llegar a la taza.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= NOSOTROS (misión y visión) ================= -->
-<section class="nosotros" id="nosotros">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Nosotros</p>
-      <h2>Vamos de la mano con el productor, desde la tierra hasta la taza.</h2>
-      <p>The Emerald Coffee nació para acortar la distancia entre el caficultor de Samaniego y quien disfruta la taza. Acompañamos al productor en cada etapa — siembra, beneficio, secado y trilla — para que la calidad del grano se refleje también en un precio justo para quien lo cultiva.</p>
-    </div>
-    <div class="nosotros-grid">
-      <div class="nosotros-img reveal">
-        <img src="IMG-20260731-WA0021.jpg" alt="Recolección manual de café junto al caficultor en Samaniego">
-      </div>
-      <div class="nosotros-cards">
-        <div class="nosotros-card reveal">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 21V3M5 4h13l-3 4 3 4H5"/></svg>
-          <h3>Misión</h3>
-          <p>Cultivar y comercializar café de especialidad de origen Samaniego, Nariño, trabajando de la mano con el caficultor en cada etapa del proceso — para llevar un grano trazable, de alta calidad y cultivado con responsabilidad, a cafeterías, tostadores y mercados de exportación, garantizando comercio justo y bienestar para las familias productoras.</p>
-        </div>
-        <div class="nosotros-card reveal reveal-d1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="4"/><path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z"/></svg>
-          <h3>Visión</h3>
-          <p>Ser reconocidos como una empresa referente del café de especialidad de Nariño, consolidando relaciones directas y duraderas con productores y clientes, y posicionando el nombre de Samaniego en mercados nacionales e internacionales por la calidad, trazabilidad y origen de nuestro café.</p>
+          <p>Con el grano ya seco y en su punto, el café queda listo: en pergamino para almacenar y comercializar, o para seguir el camino hacia la trilla, la selección y el tueste, antes de llegar a la taza.</p>
         </div>
       </div>
     </div>
@@ -277,51 +341,9 @@
 <section class="producto" id="producto">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Productos y precios</p>
-      <h2>Cuatro presentaciones, un mismo café — con precio según cotización.</h2>
-      <p>Empaque hermético con válvula, etiqueta con código QR de trazabilidad y ficha técnica impresa. Como todo café de especialidad, el precio varía con la cosecha, el punto de proceso y la cotización internacional del grano: escríbenos y te confirmamos el valor vigente para cada presentación, por kilo o por volumen.</p>
-    </div>
-    <div class="etapas-cafe reveal">
-      <div class="etapa-card">
-        <div class="etapa-img"><img src="IMG-20260731-WA0026.jpg" alt="Almendra de café, grano verde listo para exportar o tostar"></div>
-        <span class="etapa-num">01</span>
-        <h3>Almendra</h3>
-        <p>El grano verde, ya trillado y sin pergamino. Es la presentación que viaja a exportación o pasa directo a nuestro tostador — la base de todo perfil de taza.</p>
-        <div class="etapa-precio">
-          <span class="precio-tag">Precio por kg · según cotización</span>
-          <a href="https://wa.me/573116193694" target="_blank" rel="noopener" class="btn ghost sm">Consultar precio</a>
-        </div>
-      </div>
-      <div class="etapa-card">
-        <div class="etapa-img"><img src="IMG-20260731-WA0010.jpg" alt="Café pergamino seco en sacos, listo para trilla"></div>
-        <span class="etapa-num">02</span>
-        <h3>Pergamino</h3>
-        <p>Café seco con su cáscara pergamino intacta. Así se almacena y se comercializa el grano recién beneficiado, antes de pasar por la trilla.</p>
-        <div class="etapa-precio">
-          <span class="precio-tag">Precio por kg · según cotización</span>
-          <a href="https://wa.me/573116193694" target="_blank" rel="noopener" class="btn ghost sm">Consultar precio</a>
-        </div>
-      </div>
-      <div class="etapa-card">
-        <div class="etapa-img"><img src="tostion media.jpg" alt="Café tostado en grano, listo para consumo"></div>
-        <span class="etapa-num">03</span>
-        <h3>Tostado</h3>
-        <p>El punto final: grano tostado a punto medio para resaltar el perfil achocolatado y de especias dulces de Samaniego. Ideal para quienes muelen en el momento de preparar.</p>
-        <div class="etapa-precio">
-          <span class="precio-tag">Bolsa de 1kg · descuento por volumen</span>
-          <a href="https://wa.me/573116193694" target="_blank" rel="noopener" class="btn ghost sm">Consultar precio</a>
-        </div>
-      </div>
-      <div class="etapa-card">
-        <div class="etapa-img"><img src="Gemini_Generated_Image_1.png" alt="Café molido, listo para preparar"></div>
-        <span class="etapa-num">04</span>
-        <h3>Molido</h3>
-        <p>El mismo tueste medio, molido según el método de preparación: grueso para prensa francesa, medio para filtrado o fino para espresso. Listo para servir directo en la taza.</p>
-        <div class="etapa-precio">
-          <span class="precio-tag">Bolsa de 1kg · descuento por volumen</span>
-          <a href="https://wa.me/573116193694" target="_blank" rel="noopener" class="btn ghost sm">Consultar precio</a>
-        </div>
-      </div>
+      <p class="eyebrow">El café</p>
+      <h2>Presentación de 1 kg, pensada para cafeterías y distribuidores.</h2>
+      <p>Empaque hermético con válvula, etiqueta con código QR de trazabilidad y ficha técnica impresa — la misma que reproducimos arriba en la web.</p>
     </div>
     <div class="prod-gallery">
       <div class="prod-card wide reveal">
@@ -358,57 +380,86 @@
   </div>
 </section>
 
-<!-- ================= PROCESO ================= -->
-<section class="proceso" id="proceso">
+<!-- ================= PEDIDO ================= -->
+<section class="pedido" id="pedido">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Métodos de beneficio</p>
-      <h2>No todos los lotes se procesan igual.</h2>
-      <p>Después del despulpado, y según el perfil de taza que buscamos para cada lote, el café sigue uno de estos tres caminos antes de secarse.</p>
+      <p class="eyebrow">Pide tu café</p>
+      <h2>Elige tu presentación, te escribimos por WhatsApp.</h2>
+      <p>Compra directa, sin carrito ni intermediarios: eliges el gramaje y confirmamos disponibilidad, precio y envío por chat.</p>
     </div>
-    <div class="metodo-grid reveal">
-      <div class="metodo-card">
-        <div class="metodo-img"><img src="IMG-20260731-WA0016.jpg" alt="Café despulpado antes del lavado limpio"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3v6m0 0c-4 0-6 3-6 6a6 6 0 0 0 12 0c0-3-2-6-6-6z"/></svg>
-        <h4>Lavado</h4>
-        <p>El mucílago se remueve por completo en tanques con agua limpia antes del secado. Da como resultado una taza limpia, de cuerpo sedoso y notas florales bien definidas.</p>
-      </div>
-      <div class="metodo-card">
-        <div class="metodo-img"><img src="IMG-20260731-WA0019.jpg" alt="Café en fermentación para el proceso semilavado"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
-        <h4>Semilavado</h4>
-        <p>Se retira solo parte del mucílago antes de secar el grano. El resultado es una taza con más dulzor y cuerpo que el lavado tradicional, sin perder claridad en la taza.</p>
-      </div>
-      <div class="metodo-card">
-        <div class="metodo-img"><img src="IMG-20260731-WA0020.jpg" alt="Café cosechado para proceso natural sin lavar"></div>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"/></svg>
-        <h4>Natural (sin lavar)</h4>
-        <p>El grano se seca con la cereza casi intacta, sin pasar por agua. El resultado es una taza con más cuerpo, notas dulces y frutales muy marcadas.</p>
-      </div>
+    <!-- Precios no incluidos: agrégalos en .pedido-desc cuando los tengas definidos -->
+    <div class="pedido-grid reveal">
+      <a class="pedido-card" href="https://wa.me/573116193694?text=Hola%20The%20Emerald%20Coffee%2C%20quiero%20pedir%20una%20bolsa%20de%20250g%20de%20cafe." target="_blank" rel="noopener">
+        <div class="pedido-top">
+          <span class="pedido-weight">250 g</span>
+          <span class="pedido-desc">Ideal para probar el perfil de taza en casa antes de pedir más.</span>
+        </div>
+        <span class="pedido-cta">Pedir por WhatsApp →</span>
+      </a>
+      <a class="pedido-card featured" href="https://wa.me/573116193694?text=Hola%20The%20Emerald%20Coffee%2C%20quiero%20pedir%20una%20bolsa%20de%20500g%20de%20cafe." target="_blank" rel="noopener">
+        <div class="pedido-top">
+          <span class="pedido-badge">Más pedido</span>
+          <span class="pedido-weight">500 g</span>
+          <span class="pedido-desc">El punto justo entre probar y abastecerte para varias semanas.</span>
+        </div>
+        <span class="pedido-cta">Pedir por WhatsApp →</span>
+      </a>
+      <a class="pedido-card" href="https://wa.me/573116193694?text=Hola%20The%20Emerald%20Coffee%2C%20quiero%20pedir%20una%20bolsa%20de%201kg%20de%20cafe." target="_blank" rel="noopener">
+        <div class="pedido-top">
+          <span class="pedido-weight">1 kg</span>
+          <span class="pedido-desc">Presentación de exportación, la misma que ves en la ficha técnica.</span>
+        </div>
+        <span class="pedido-cta">Pedir por WhatsApp →</span>
+      </a>
+      <a class="pedido-card pedido-vol" href="https://wa.me/573116193694?text=Hola%20The%20Emerald%20Coffee%2C%20quiero%20informacion%20sobre%20pedidos%20por%20volumen%20para%20mi%20cafeteria%20o%20negocio." target="_blank" rel="noopener">
+        <div class="pedido-top">
+          <span class="pedido-weight">Por volumen</span>
+          <span class="pedido-desc">Distribución para cafeterías y negocios, con precios especiales por kilos.</span>
+        </div>
+        <span class="pedido-cta">Cotizar por WhatsApp →</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ================= VIDEO TARABITA ================= -->
-<section class="tarabita">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Del lote a la vía</p>
-      <h2>Así baja el café de la montaña: en tarabita.</h2>
-      <p>En las veredas altas de Samaniego el terreno es empinado y no entran vehículos. Los sacos de café bajan por un cable — la tarabita — hasta el punto donde sí puede recogerlos un carro. Así se ha hecho siempre en esta finca.</p>
+<!-- ================= LA FINCA ================= -->
+<section class="finca" id="finca">
+  <div class="finca-video-wrap">
+    <video class="finca-video" autoplay muted loop playsinline poster="IMG-20260731-WA0027.jpg">
+      <source src="VID-20260731-WA0025.mp4" type="video/mp4">
+    </video>
+    <div class="finca-video-scrim"></div>
+    <div class="finca-video-content container">
+      <p class="eyebrow reveal">La finca</p>
+      <h2 class="reveal">La finca, sin filtros.</h2>
+      <p class="reveal reveal-d1">Así se ve el terreno donde crece cada lote: montaña, niebla y el trabajo real de la familia caficultora, sin poses de estudio.</p>
     </div>
-    <div class="tarabita-video reveal">
-      <video controls playsinline preload="metadata" poster="IMG-20260731-WA0027.jpg">
-        <source src="VID-20260731-WA0025.mp4" type="video/mp4">
-        Tu navegador no soporta el video. Puedes descargarlo aquí: <a href="VID-20260731-WA0025.mp4">ver video</a>.
-      </video>
+  </div>
+  <div class="container">
+    <div class="finca-gallery reveal">
+      <div class="finca-photo">
+        <img src="IMG-20260731-WA0012.jpg" alt="Vista panorámica de las montañas de Samaniego, Nariño">
+        <span>Vista desde la finca</span>
+      </div>
+      <div class="finca-photo">
+        <img src="IMG-20260731-WA0011.jpg" alt="Casa tradicional de la finca cafetera en Samaniego">
+        <span>La casa de la finca</span>
+      </div>
+      <div class="finca-photo">
+        <img src="IMG-20260731-WA0024.jpg" alt="Bodega con sacos de café listos para despacho">
+        <span>Bodega, lista para despacho</span>
+      </div>
+      <div class="finca-photo">
+        <img src="IMG-20260731-WA0027.jpg" alt="Cafetal en ladera con palma de cera de fondo">
+        <span>Ladera con palma de cera</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ================= VALORES ================= -->
 <section class="valores">
-  <div class="valores-bg"><img src="IMG-20260731-WA0027.jpg" alt="Ladera cafetera en Samaniego, Nariño"></div>
   <div class="container">
     <div class="section-head reveal">
       <p class="eyebrow">Compromiso</p>
@@ -424,96 +475,41 @@
   </div>
 </section>
 
-<!-- ================= EXPORTACIÓN ================= -->
-<section class="exportacion">
-  <div class="container">
-    <div class="exportacion-grid">
-      <div class="exportacion-img reveal">
-        <img src="IMG-20260731-WA0012.jpg" alt="Sacos de café listos para exportación">
-        <div class="exportacion-badge">
-          <b>SCA +86</b>
-          <span>Grado especialidad</span>
-        </div>
-      </div>
-      <div class="reveal reveal-d1">
-        <p class="eyebrow">Exportación</p>
-        <h2>Café listo para salir de Samaniego al mundo.</h2>
-        <p class="lead">Empacamos en sacos aptos para exportación, con ficha técnica y trazabilidad por lote, para que compradores internacionales conozcan el origen exacto de cada café: vereda, altitud, variedad y método de beneficio.</p>
-        <ul class="export-list">
-          <li>Trazabilidad por lote, desde la finca hasta el contenedor.</li>
-          <li>Disponible en almendra (verde), para tostadores y comercializadoras.</li>
-          <li>Volúmenes y condiciones de envío a cotizar según destino.</li>
-        </ul>
-        <a href="https://wa.me/573116193694" target="_blank" rel="noopener" class="btn">Cotizar exportación</a>
-      </div>
-    </div>
-
-    <div class="export-specs reveal">
-      <div class="export-spec">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 9l9-6 9 6-9 6-9-6z"/><path d="M3 9v6l9 6 9-6V9"/></svg>
-        <b>Modalidad</b>
-        <p>FOB Buenaventura o Tumaco, según destino y volumen del pedido.</p>
-      </div>
-      <div class="export-spec">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-        <b>Empaque</b>
-        <p>Sacos de 60/69 kg tipo yute o GrainPro, marcados y sellados para contenedor.</p>
-      </div>
-      <div class="export-spec">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M9 13h6M9 17h6M9 9h2"/></svg>
-        <b>Documentación</b>
-        <p>Ficha técnica, certificado de origen y trazabilidad por lote listos para aduana.</p>
-      </div>
-      <div class="export-spec">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-        <b>Tiempos</b>
-        <p>Volúmenes y fechas de despacho a coordinar con anticipación según cosecha.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALERÍA ================= -->
-<section class="galeria">
+<!-- ================= FAQ ================= -->
+<!-- Respuestas de ejemplo: ajusta pedido mínimo, tiempos y costos de envío según tus condiciones reales -->
+<section class="faq" id="faq">
   <div class="container">
     <div class="section-head reveal">
-      <p class="eyebrow">Galería</p>
-      <h2>La finca, el proceso y la gente detrás de cada saco.</h2>
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Antes de escribirnos, esto puede resolver tu duda.</h2>
     </div>
-    <div class="galeria-grid reveal">
-      <div class="galeria-item wide"><img src="IMG-20260731-WA0011.jpg" alt="Paisaje de montaña en Samaniego"></div>
-      <div class="galeria-item"><img src="IMG-20260731-WA0008.jpg" alt="Cafetal en Samaniego"></div>
-      <div class="galeria-item"><img src="IMG-20260731-WA0009.jpg" alt="Cereza de café recién cortada"></div>
-      <div class="galeria-item"><img src="IMG-20260731-WA0017.jpg" alt="Planta de café con cerezas"></div>
-      <div class="galeria-item wide"><img src="IMG-20260731-WA0028.jpg" alt="Tarabita bajando café por la montaña"></div>
-      <div class="galeria-item"><img src="IMG-20260731-WA0023.jpg" alt="Trabajo en finca cafetera"></div>
-      <div class="galeria-item wide"><img src="IMG-20260731-WA0024.jpg" alt="Sacos de café almacenados"></div>
-      <div class="galeria-item wide"><img src="IMG-20260731-WA0029.jpg" alt="Cable de tarabita en la finca"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= UBICACIÓN ================= -->
-<section class="ubicacion" id="ubicacion">
-  <div class="container">
-    <div class="section-head reveal">
-      <p class="eyebrow">Ubicación</p>
-      <h2>Nuestro café nace en Samaniego, Nariño.</h2>
-      <p>En las veredas altas del municipio, a 1.800 msnm sobre el nivel del mar, especialmente en la vereda La Esmeralda — de donde viene el nombre de nuestra marca —, de donde provienen nuestros caficultores aliados. Escríbenos si quieres visitar la finca o coordinar recogida de muestras.</p>
-    </div>
-    <div class="ubicacion-wrap reveal">
-      <iframe
-        src="https://www.google.com/maps?q=Samaniego,+Nari%C3%B1o,+Colombia&output=embed"
-        width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" title="Ubicación The Emerald Coffee en Samaniego, Nariño">
-      </iframe>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>¿Cuál es el pedido mínimo?</summary>
+        <p>Para pedidos personales no hay mínimo: puedes empezar desde una bolsa de 250g. Para distribución a cafeterías y negocios, escríbenos por WhatsApp para definir cantidades y precios por volumen.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen envíos a todo el país?</summary>
+        <p>Sí, hacemos envíos a nivel nacional. El tiempo y el costo se confirman según tu ciudad al momento de hacer el pedido por WhatsApp.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo pedir una muestra antes de comprar por volumen?</summary>
+        <p>Sí. Si tienes una cafetería o negocio y quieres probar el café antes de un pedido grande, escríbenos y coordinamos el envío de una muestra de degustación.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué tueste manejan?</summary>
+        <p>Trabajamos un tueste medio, pensado para resaltar el perfil achocolatado y las notas dulces y florales de este origen. Funciona bien en espresso, filtrado y prensa francesa.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puedo conocer la trazabilidad de mi lote?</summary>
+        <p>Sí. Cada empaque incluye un código QR con la fecha de tueste y el número de lote, para que conozcas el origen exacto de tu café.</p>
+      </details>
     </div>
   </div>
 </section>
 
 <!-- ================= CONTACTO ================= -->
 <section class="contacto" id="contacto">
-  <div class="contacto-bg"><img src="IMG-20260731-WA0012.jpg" alt="Paisaje de la finca en Samaniego, Nariño"></div>
   <div class="container">
     <div class="contacto-grid">
       <div>
