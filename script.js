@@ -97,6 +97,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---------- galería: lightbox ---------- */
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const galeriaImgs = document.querySelectorAll('#galeriaGrid .galeria-item img');
+  if (lightbox && lightboxImg) {
+    galeriaImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+    const closeLightbox = () => lightbox.classList.remove('open');
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  }
+
   /* ---------- formulario de contacto → WhatsApp ---------- */
   const form = document.getElementById('contactForm');
   const formNote = document.getElementById('formNote');
